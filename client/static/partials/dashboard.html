@@ -1,0 +1,37 @@
+<div class="container">
+  <div>
+    <span>Home</span> |
+    <a href="/#/" ng-click="logout()">Logout</a>
+  </div>
+  </div>
+  <div class="container">
+    <div ng-if="!error">
+  <div>
+    <h1>Hello,{{session.name}}!</h1>
+    <h4>
+      <a href="#/ask_question">Add A New Question</a>
+  </div>
+    </div>
+  <form>
+    <input type="text" placeholder="Search a question" ng-model="filter.text" autofocus>
+  </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Answer</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+    <tbody>
+      <tr ng-repeat="question in questions | filter:filter">
+        <td>{{question.text}}</td>
+        <td>{{question._answers.length}}</td>
+        <td>
+          <a href="#/question/{{question._id}}">Show</a> /
+          <a href="#/question/{{question._id}}/new_answer">Answer</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

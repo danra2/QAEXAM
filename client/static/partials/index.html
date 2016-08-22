@@ -1,0 +1,14 @@
+<div>
+    <div class="container">
+          <h1>Q&A</h1>
+          <h3>Please Login With A User Name:</h3>
+        <form>
+            <div>
+              <span>Name:</span>
+              <input type="text" ng-model="user.name" required ng-minlength='5'>
+            </div>
+            <input type="submit" value="Enter" ng-click="login(user)">
+            <span>{{message}}</span>
+        </form>
+    </div>
+</div>

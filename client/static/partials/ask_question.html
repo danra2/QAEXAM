@@ -1,0 +1,35 @@
+<div class="container">
+  <div>
+    <a href="/#/dashboard">Home</a> |
+    <a href="/#/" ng-click="logout()">Logout</a>
+  </div>
+</div>
+<div class="container">
+  <div ng-if="!error">
+    <div>
+      <h1>New Question</h1>
+    </div>
+  </div>
+    <form>
+    <div>
+        <h4>Question</h4>
+    <div>
+        <input type="text" placeholder="Enter(min 10 chars)" ng-model="newQuestion.text" required ng-minlength='10'>
+      </div>
+    </div>
+    <div>
+        <h4>Description (optional)</h4>
+      <div>
+          <input type="text" placeholder="Enter description" ng-model="newQuestion.description">
+      </div>
+      <br>
+    </div>
+    <div>
+    <div>
+      <button type="submit" ng-click="cancel()">Cancel</button>
+      <button type="submit" ng-click="createQuestion(newQuestion)">Submit</button>
+    </div>
+    </div>
+  </form>
+    <span>{{message}}</span>
+</div>

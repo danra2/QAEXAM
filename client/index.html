@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mean Belt Exam</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+    <script src="assets/app.js"></script>
+
+    <!-- Factories -->
+    <script src="assets/factories/dashboardFactory.js"></script>
+    <script src="assets/factories/questionsFactory.js"></script>
+    <script src="assets/factories/answersFactory.js"></script>
+    <script src="assets/factories/usersFactory.js"></script>
+
+    <!-- Controller -->
+    <script src="assets/controllers/dashboardController.js"></script>
+    <script src="assets/controllers/questionsController.js"></script>
+    <script src="assets/controllers/answersController.js"></script>
+    <script src="assets/controllers/indexController.js"></script>
+  </head>
+
+    <body ng-app="app">
+        <div ng-view></div>
+    </body>
+
+</html>

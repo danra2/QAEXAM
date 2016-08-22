@@ -1,0 +1,22 @@
+{
+  "name": "mean test",
+  "version": "1.0.0",
+  "description": "Mean Exam One",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Daniel Ra",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bcrypt": "^0.8.7",
+    "express": "^4.14.0",
+    "express-session": "^1.14.0",
+    "mongodb": "^2.2.4",
+    "mongoose": "^4.5.5",
+    "path": "^0.12.7"
+  }
+}

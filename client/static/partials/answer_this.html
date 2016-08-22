@@ -1,0 +1,39 @@
+<div class="container">
+  <div>
+    <a href="/#/dashboard">Home</a> |
+    <a class="nav-item nav-link" href="/#/question/{{id}}">Go Back To Question</a> |
+    <a class="nav-item nav-link" href="/#/" ng-click="logout()">Logout</a>
+  </div>
+  </div>
+  <div class="container">
+  <div ng-if="!error">
+  <div>
+    <h1>{{question.text}}</h1>
+    <h4>{{question.description}}</h4>
+  </div>
+  </div>
+      <form>
+        <div>
+          <label>Your Answer:</label>
+          <br>
+        <div>
+          <input type="text" placeholder="Enter (min 10 chars)" ng-model="newAnswer.text" required ng-minlength='10'>
+          <br>
+        </div>
+      </div>
+  <div class>
+    <label>Supporting details for your answer (optional):</label>
+    <br>
+    <div>
+      <input type="text" placeholder="Enter description" ng-model="newAnswer.description">
+    </div>
+  </div>
+  <div>
+    <div>
+      <button type="submit" ng-click="createAnswer(newAnswer)">Submit</button>
+      <button type="submit" ng-click="cancel()">Cancel</button>
+    </div>
+  </div>
+    </form>
+    <span>{{message}}</span>
+</div>
